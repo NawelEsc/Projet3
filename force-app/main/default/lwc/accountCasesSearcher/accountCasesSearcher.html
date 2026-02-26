@@ -12,7 +12,7 @@
             </lightning-button>
         </div>
 
-        <template if:true={cases}>
+        <template if:true={cases.length}>
             <lightning-datatable data={cases}
                                  columns={columns}
                                  key-field="Id">

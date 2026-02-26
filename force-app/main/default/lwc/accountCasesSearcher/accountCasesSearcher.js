@@ -33,9 +33,9 @@ export default class AccountCaseSearchComponent extends LightningElement {
             subjectSearchTerm: this.searchTerm
         })
             .then(result => {
-                this.cases = result;
+                this.cases = result || [];
                 this.error = null;
-                this.noResults = (result.length === 0);
+                this.noResults = this.cases.length === 0;
             })
             .catch(error => {
                 this.error = error;
